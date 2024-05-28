@@ -29,18 +29,15 @@ public class Files {
             document.appendChild(root);
 
             // Create book elements and add text content
-            Element book1 = document.createElement("Program1");
-            book1.appendChild(document.createTextNode("Java Programming"));
-            Element book2 = document.createElement("Program2");
-            book2.appendChild(document.createTextNode("Python Programming"));
-            Element book3 = document.createElement("Program3");
-            book3.appendChild(document.createTextNode("JavaScript"));
-            Element book4 = document.createElement("Program4");
-            book4.appendChild(document.createTextNode("C Programming"));
+            Element book1 = document.createElement("Nombre");
+            book1.appendChild(document.createTextNode("JOSE CIRILO"));
+            Element book2 = document.createElement("FECHA");
+            book2.appendChild(document.createTextNode("2024-05-27"));
+            Element book3 = document.createElement("TOTAL");
+            book3.appendChild(document.createTextNode("$55"));
             root.appendChild(book1);
             root.appendChild(book2);
             root.appendChild(book3);
-            root.appendChild(book4);
 
             // Write to XML file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -48,7 +45,7 @@ public class Files {
             DOMSource source = new DOMSource(document);
 
             // Specify your local file path
-            StreamResult result = new StreamResult("C:/Users/Mahesh/Desktop/DSAˍPratice/output.xml");
+            StreamResult result = new StreamResult("output.xml");
             transformer.transform(source, result);
 
             System.out.println("XML file created successfully!");
@@ -57,7 +54,7 @@ public class Files {
 
         public void read() throws Exception {
             // Specify the file path as a File object
-            File xmlFile = new File("C:/Users/Mahesh/Desktop/DSAˍPratice/output.xml");
+            File xmlFile = new File("output.xml");
 
             // Create a DocumentBuilder
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
